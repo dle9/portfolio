@@ -10,9 +10,21 @@ const theme = createTheme({
     secondary: {
       main: '#19857b',
     },
+    background:{
+      main: "#180021",
+      secondary: "#260133",
+    },
+    highlight:{
+      main:"#00afc9",
+      secondary:"#00404a"
+    },
     error: {
       main: red.A400,
     },
+    text: {
+      light: '#ffffff',
+      dark:'#000000',
+    }
   },
 });
 
