@@ -18,7 +18,7 @@ const theme = createTheme({
     body1: {
       fontFamily: 'my-body, Arial, sans-serif',
       fontSize: '1.3rem',
-      color: 'rgba(255, 255, 255, 0.36)'
+      color:'rgba(255,255,255,0.36)'
     },
     body2: {
       fontFamily: 'my-body, Arial, sans-serif',
@@ -27,8 +27,8 @@ const theme = createTheme({
     },
     body3: {
       fontFamily: 'my-body, Arial, sans-serif',
-      fontSize: '1.3rem',
-      color: '#ffffff'
+      fontSize: '1.3rem',  
+      color:'rgba(255,255,255,0.7)'
     },
   },
 
@@ -45,7 +45,8 @@ const theme = createTheme({
     },
     highlight:{
       main:"#00afc9",
-      secondary:"#00404a"
+      secondary:"#00404a",
+      bold:"#026473"
     },
     game:{
       material:"#221642",

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Typography } from '@mui/material';
 
-import {blinkingAnimation} from '../styles/animation.js'
+import {blinkingAnimation} from '../styles/textStyle.js'
 import { ArcadeWrapper } from '../styles/templates.jsx'
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
           mb:19
         }}
       >
-        Welcome to my website! <br />
+        Welcome to the Alpha Arcade! <br />
         Feel free to play along, <br />
         or just browse as you wish. <br />
       </Typography>
