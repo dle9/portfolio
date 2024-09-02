@@ -1,8 +1,12 @@
-
-      <Element name="home" className="element">
-        <Box sx={{ display:'flex', justifyContent:'center',marginTop:'-2rem',height: '100vh', backgroundColor:"background.main", color:"text.light"}}>
-          <Box sx={{border:`2px solid ${theme.palette.highlight.main}`,marginTop:'2rem', backgroundColor:'background.secondary', height:'80vh', width:'80vw'}}>
-            <Home />
-          </Box>
-        </Box> 
-      </Element>
+ x
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+              <IconButton color="inherit" component={Link} to="/">
+                <HomeIcon />
+              </IconButton>
+              <IconButton color="inherit" component={Link} to="/about">
+                <AboutIcon />
+              </IconButton>
+              <IconButton color="inherit" component={Link} to="/projects">
+                <PortfolioIcon />
+              </IconButton>
+            </Box>

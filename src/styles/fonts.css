@@ -1,13 +1,20 @@
 @font-face {
-  font-family: 'Retronoid-title';
-  src: url('../assets/fonts/retronoid-title/Retronoid-n8vY.ttf') format('truetype');
+  font-family: 'my-title';
+  src: url('../assets/fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Superlegendboy-text';
-  src: url('../assets/fonts/valorant/val.ttf') format('truetype');
+  font-family: 'my-body';
+  src: url('../assets/fonts/superlegendboy-text/SuperLegendBoy-4w8Y.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'my-menu';
+  src: url('../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

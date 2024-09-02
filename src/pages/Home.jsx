@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Box, Typography } from '@mui/material';
 
 import {blinkingAnimation} from '../styles/animation.js'
 import backgroundImage from '../assets/images/home-bg.png';

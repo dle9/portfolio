@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import theme from './styles/theme';
 
-import ArcadeWrapper from './components/ArcadeWrapper.jsx'
+import { ArcadeWrapper } from './styles/templates.jsx'
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Projects from './pages/Projects';
+import Work from './pages/Work';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -34,9 +34,9 @@ root.render(
               <About />
             </ArcadeWrapper>
           } />
-          <Route path="/projects" element={
+          <Route path="/work" element={
             <ArcadeWrapper>
-              <Projects />
+              <Work />
             </ArcadeWrapper>
           } />
         </Routes>

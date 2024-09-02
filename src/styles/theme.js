@@ -6,17 +6,22 @@ import './fonts.css'
 const theme = createTheme({
   typography: {
     h3: {
-      fontFamily: 'Retronoid-title, Arial, sans-serif',
+      fontFamily: 'my-title, Arial, sans-serif',
       fontSize: '2.6rem',
       color:'#ffffff',
     },
+    h4: {
+      fontFamily: 'my-menu, Arial, sans-serif',
+      fontSize: '1.3rem',
+      color:'#ffffff',
+    },
     body1: {
-      fontFamily: 'Superlegendboy-text, Arial, sans-serif',
+      fontFamily: 'my-body, Arial, sans-serif',
       fontSize: '1.3rem',
       color: 'rgba(255, 255, 255, 0.36)'
     },
     body2: {
-      fontFamily: 'Superlegendboy-text, Arial, sans-serif',
+      fontFamily: 'my-body, Arial, sans-serif',
       fontSize: '2.3rem',
       color: '#ffffff'
     },
