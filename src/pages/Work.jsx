@@ -66,7 +66,7 @@ export default function Work() {
             href={link} 
             target="_blank" 
             rel="noopener noreferrer" 
-            style={{ textDecoration: 'none', color: theme.palette.primary.main }}
+            style={{ textDecoration: 'none', color: theme.palette.highlight.bold }}
           >
             Link
           </a>
