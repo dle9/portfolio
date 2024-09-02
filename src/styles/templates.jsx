@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import { useTheme, Box, IconButton, Typography } from '@mui/material';
 
+import arcadeBg from '../assets/images/home-bg.png';
+import machineBg from '../assets/images/info-bg.png';
+
 const VerticalIconLabel = ({ icon: Icon, label, to }) => {
-  // Split the label into an array of letters
   const letters = label.split('');
 
   return (
@@ -35,7 +37,7 @@ const VerticalIconLabel = ({ icon: Icon, label, to }) => {
         {letters.map((letter, index) => (
           <Typography
             key={index}
-            variant="h4" 
+            variant="h4"  
             sx={{
               display: 'block',
               textAlign: 'center',
@@ -64,18 +66,69 @@ const ArcadeWrapper = ({ children, ...props }) => {
       {...props}
     >
       <Box
-        sx={{
-          border: `2px solid ${theme.palette.highlight.main}`,
-          marginTop: '2rem',
-          backgroundColor: theme.palette.background.light,
-          height: '80vh',
-          width: '80vw',
-        }}
-      >
-        {children}
+      sx={{
+        border: `2px solid ${theme.palette.highlight.main}`,
+        marginTop: '2rem',
+        backgroundColor: theme.palette.background.light,
+        height: '80vh',
+        width: '80vw',   
+      }}>
+        <Box sx={{
+          backgroundImage: `url(${arcadeBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}>
+          {children}
+        </Box>
       </Box>
     </Box>
   );
 }
 
-export { VerticalIconLabel, ArcadeWrapper };
+const MachineWrapper = ({ children, ...props }) => {
+  const theme = useTheme();
+
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        height:'95vh',
+        backgroundColor: theme.palette.background.dark,
+        color: theme.palette.text.light,
+      }}
+      {...props}
+    >
+      <Box  
+        sx={{
+          display:'flex', justifyContent:'center', alignItems:'center',
+          overflowY:'auto',
+          border: `2px solid ${theme.palette.highlight.main}`,
+          marginTop: '2rem',
+          backgroundColor: theme.palette.background.light,
+          height: '702px',
+          width:'771px',
+          backgroundImage: `url(${machineBg})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition:'center',
+          textAlign:'center',
+        }}
+      >
+        <Box sx={{height:'70%', width:'80%'}}>
+          {children}
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
+export { VerticalIconLabel, ArcadeWrapper, MachineWrapper };

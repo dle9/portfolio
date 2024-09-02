@@ -25,6 +25,11 @@ const theme = createTheme({
       fontSize: '2.3rem',
       color: '#ffffff'
     },
+    body3: {
+      fontFamily: 'my-body, Arial, sans-serif',
+      fontSize: '1.3rem',
+      color: '#ffffff'
+    },
   },
 
   palette: {
@@ -41,6 +46,10 @@ const theme = createTheme({
     highlight:{
       main:"#00afc9",
       secondary:"#00404a"
+    },
+    game:{
+      material:"#221642",
+      screen:"#180f2e",
     },
     error: {
       main: red.A400,

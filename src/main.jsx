@@ -5,12 +5,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import theme from './styles/theme';
+import { ArcadeWrapper,MachineWrapper } from './styles/templates.jsx'
 
-import { ArcadeWrapper } from './styles/templates.jsx'
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
+import Footer from './components/Footer'
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -24,22 +25,12 @@ root.render(
         <NavBar />
         
         <Routes>
-          <Route path="/" element={
-            <ArcadeWrapper>
-              <Home />
-            </ArcadeWrapper>
-          } />
-          <Route path="/about" element={
-            <ArcadeWrapper>
-              <About />
-            </ArcadeWrapper>
-          } />
-          <Route path="/work" element={
-            <ArcadeWrapper>
-              <Work />
-            </ArcadeWrapper>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
         </Routes>
+        
+        <Footer /> 
 
       </Router>
     </ThemeProvider>

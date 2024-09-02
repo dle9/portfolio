@@ -1,15 +1,20 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+import { MachineWrapper } from '../styles/templates.jsx'
 
 export default function About() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-        </Typography>
-      </Box>
-    </Container>
+    <MachineWrapper>
+      <Typography variant="body3" component="h1" sx={{ mb: 2 }}>
+        Howdy! I'm Deric, and I'm currently a senior at 
+        Texas A&M University studying Computer Science. Also,
+        I'm minoring in Cybersecurity with the goal of furthering
+        my career in Cybersecurity after graduation. Some of my 
+        interests in this field are: Incident Response,
+        Reverse Engineering, and Penetration Testing.
+      </Typography>
+    </MachineWrapper>
   );
 }
+
+

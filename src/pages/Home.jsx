@@ -1,33 +1,19 @@
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 import {blinkingAnimation} from '../styles/animation.js'
-import backgroundImage from '../assets/images/home-bg.png';
+import { ArcadeWrapper } from '../styles/templates.jsx'
 
 export default function Home() {
   const handleClick = () => {
-    const userInput = prompt('Work in progres!');
+    const userInput = prompt('Work in progress!');
     if (userInput) {
       alert(`You entered: ${userInput}`);
     }
   };
 
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center'
-      }}
-    >
+    <ArcadeWrapper>
       <Typography
         variant="body1"
         sx={{
@@ -52,7 +38,7 @@ export default function Home() {
       >
         Start
       </Typography>
-    </Box>
+    </ArcadeWrapper>
   );
 }
 
