@@ -1,10 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import CssBaseline from '@mui/material/CssBaseline';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
+import { Link, useLocation } from 'react-router-dom'; 
+import { AppBar, Toolbar, IconButton, CssBaseline, Typography, useScrollTrigger, Box } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import AboutIcon from '@mui/icons-material/AccountCircle';
 import PortfolioIcon from '@mui/icons-material/Work';
@@ -25,6 +21,17 @@ function ElevationScroll(props) {
 }
 
 export default function NavBar(props) {
+  const location = useLocation();
+
+  const getTitle = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'home';
+      default:
+        return location.pathname.substring(1);
+    }
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -32,29 +39,48 @@ export default function NavBar(props) {
         <AppBar
           position="sticky"
           sx={{
-            backgroundColor: 'background.main',
-            marginLeft: 'auto',
+            backgroundColor: 'background.dark',
             boxShadow: 'none',
           }}
         >
           <Toolbar
             sx={{
-              marginLeft: 'auto',
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
-              color: 'text.light',
+              px: 2,
+              justifyContent: 'space-between', // Adjust spacing for side items
             }}
           >
-            <IconButton color="inherit" component={Link} to="/">
-              <HomeIcon />
-            </IconButton>
-            <IconButton color="inherit" component={Link} to="/about">
-              <AboutIcon />
-            </IconButton>
-            <IconButton color="inherit" component={Link} to="/projects">
-              <PortfolioIcon />
-            </IconButton>
+            {/* Left side */}
+            <Box sx={{ flex: 1 }}>
+              {/* Empty box for spacing */}
+            </Box>
+
+            {/* Center: Title */}
+            <Box sx={{ flex: 2, display: 'flex', justifyContent: 'center' }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  color: 'text.light',
+                  marginTop:'1rem',
+                }}
+              >
+                {getTitle()}
+              </Typography>
+            </Box>
+
+            {/* Right side: Nav */}
+            <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+              <IconButton color="inherit" component={Link} to="/">
+                <HomeIcon />
+              </IconButton>
+              <IconButton color="inherit" component={Link} to="/about">
+                <AboutIcon />
+              </IconButton>
+              <IconButton color="inherit" component={Link} to="/projects">
+                <PortfolioIcon />
+              </IconButton>
+            </Box>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

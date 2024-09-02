@@ -9,7 +9,7 @@ export default function ArcadeWrapper({ children, ...props }) {
         display: 'flex',
         justifyContent: 'center',
         height: '95vh',
-        backgroundColor: theme.palette.background.main,
+        backgroundColor: theme.palette.background.dark,
         color: theme.palette.text.light,
       }}
       {...props}
@@ -18,7 +18,7 @@ export default function ArcadeWrapper({ children, ...props }) {
         sx={{
           border: `2px solid ${theme.palette.highlight.main}`,
           marginTop: '2rem',
-          backgroundColor: theme.palette.background.secondary,
+          backgroundColor: theme.palette.background.light,
           height: '80vh',
           width: '80vw',
         }}
