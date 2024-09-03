@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Typography } from '@mui/material';
 import { MachineWrapper } from '../styles/templates.jsx'
 import {Bold} from '../styles/textStyle.jsx' 
+import {blinkingAnimation} from '../styles/textStyle.js'
 
 export default function About() {
   return (
@@ -26,7 +27,12 @@ export default function About() {
             rel="noopener noreferrer" 
             style={{ textDecoration: 'none' }}
           >
-            <Bold>Resume</Bold>
+            <Bold sx={{
+              animation: `blink-animation 1s infinite`,
+              '@keyframes blink-animation': blinkingAnimation,
+            }}>
+              Resume
+            </Bold>
           </a>
         </Typography>
 
