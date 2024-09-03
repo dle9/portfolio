@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/check_lvl1": {"origins": ["http://dericle.com","http://localhost:5173"]}})
+CORS(app, resources={r"/check_lvl1": {"origins": ["https://dericle.com","http://localhost:5173"]}})
 
 lvl1 = "dle{al4pA_arCaD3_roCK5}"
 
