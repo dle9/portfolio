@@ -9,7 +9,7 @@ export default function Home() {
   const navigate=useNavigate();
 
   const handleClick = async () => {
-    const userInput = prompt('The hieroglyps seem interesting. I wonder who made them?');
+    const userInput = prompt('The hieroglyphs seem interesting. I wonder who made them?');
     
     if (userInput) {
       try {
