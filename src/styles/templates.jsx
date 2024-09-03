@@ -67,13 +67,14 @@ const ArcadeWrapper = ({ children, ...props }) => {
     >
       <Box
       sx={{
-        border: `2px solid ${theme.palette.highlight.main}`,
         marginTop: '2rem',
         backgroundColor: theme.palette.background.light,
         height: '80vh',
         width: '80vw',   
       }}>
         <Box sx={{
+          border: `2px solid ${theme.palette.highlight.main}`,
+          borderRadius:'20px',
           backgroundImage: `url(${arcadeBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -112,6 +113,7 @@ const MachineWrapper = ({ children, ...props }) => {
           display:'flex', justifyContent:'center', alignItems:'center',
           overflowY:'auto',
           border: `2px solid ${theme.palette.highlight.main}`,
+          borderRadius:'60px',
           marginTop: '2rem',
           backgroundColor: theme.palette.background.light,
           height: '702px',
