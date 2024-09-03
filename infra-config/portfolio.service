@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn instance for a simple hello world app
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/portfolio
+ExecStart=/home/ubuntu/portfolio/venv/bin/gunicorn -b localhost:5000 app:app
+Environment="LVL1PASS=dle{al4pA_arCaD3_roCK5}"
+Restart=always
+[Install]
+WantedBy=multi-user.target
