@@ -2,8 +2,8 @@ import * as React from 'react';
 import {useNavigate} from 'react-router-dom';
 import { Typography } from '@mui/material';
 
-import { blinkingAnimation } from '../styles/textStyle.js';
 import { ArcadeWrapper } from '../styles/templates.jsx';
+import { blinkingAnimation } from '../styles/textStyle.js';
 
 export default function Home() {
   const navigate=useNavigate();

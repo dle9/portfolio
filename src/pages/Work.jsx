@@ -4,6 +4,7 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { MachineWrapper } from '../styles/templates.jsx';
 import {Bold} from '../styles/textStyle.jsx'
+import { blinkingAnimation } from '../styles/textStyle.js';
 
 const screens = [
   { title: 'Malware Analysis Lab', description: 'Conducted malware analysis in a secure environment using FlareVM and Remnux. Tools used: Ghidra, IDA, x64dbg, Wireshark, and more.',link:'https://docs.google.com/document/d/16t379RAujg53cBQ-gbBr9gMfZgKMCISOQAbjxpQoioo/edit?usp=sharing' },
@@ -68,7 +69,12 @@ export default function Work() {
             rel="noopener noreferrer" 
             style={{ textDecoration: 'none', color: theme.palette.highlight.bold }}
           >
+          <Bold sx={{
+            animation: `blink-animation 1s infinite`,
+            '@keyframes blink-animation': blinkingAnimation,
+          }}>
             Link
+          </Bold>
           </a>
         </Typography>
         <Box sx={{ mt: 'auto', mb:15 }}>
