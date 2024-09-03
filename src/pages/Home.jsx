@@ -13,7 +13,7 @@ export default function Home() {
     
     if (userInput) {
       try {
-        const response = await fetch('http://localhost:8000/check_lvl1', {
+        const response = await fetch('http://dericle.com:8000/check_lvl1', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
