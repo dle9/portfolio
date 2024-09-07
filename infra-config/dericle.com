@@ -11,7 +11,15 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri /index.html;
+    }
+
+    location /about/ {
+	root /var/www/dericle.com;
+    }
+
+    location /work/ {
+	root /var/www/dericle.com;
     }
 }
 
